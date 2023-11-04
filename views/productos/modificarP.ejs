@@ -1,0 +1,25 @@
+<%- include("../templates/encabezado") %>
+<%- include("../templates/menu") %>
+<div class="container mt-5">
+    <form action="/editarProducto" method="post" enctype="multipart/form-data">
+        <div class="card">
+            <div class="card-header">
+                <h1>MODIFICAR PRODUCTO</h1>
+            </div>
+            <div class="card-body">
+                <input type="hidden" name="id" id="id" value="<%= prod.id %>">
+                <input type="hidden" name="foto" id="foto" value="<%= prod.foto %>">
+                <input class="form-control mb-3" value="<%= prod.nombre %>" type="text" name="nombre" id="nombre" placeholder="Nombre" autofocus>
+                <input class="form-control mb-3" value="<%= prod.precio %>" type="text" name="precio" id="precio" placeholder="Precio">
+                <input class="form-control mb-3" value="<%= prod.stock %>" type="text" name="stock" id="stock" placeholder="Stock">
+                <input class="form-control mb-3" value="<%= prod.categoria %>" type="text" name="categoria" id="categoria" placeholder="Categoria">
+                <input class="form-control mb-3" type="file" name="foto" id="foto">
+
+            </div>
+            <div class="card-footer">
+                <button class="form-control btn btn-primary">Modificar Producto</button>
+            </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+        </div>
+    </form>
+</div>
+<%- include("../templates/pie") %>
